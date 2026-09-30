@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>IIT(BHU) — Festival Map</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="preloader" id="preloader"><div class="loader-mark">IIT <span>(BHU)</span><small>FESTIVAL MAP</small></div></div>
+<div class="grain"></div>
+
+<header>
+  <button class="sun" id="menuBtn" aria-label="Menu"><i></i><i></i><i></i></button>
+  <div class="wordmark">IIT (BHU)<small>VARANASI</small></div>
+  <div class="top-meta">CAMPUS MAP <span>·</span> 01</div>
+</header>
+
+<main id="stage">
+  <div class="map-world" id="world">
+    <img src="images/island-map.png" alt="Stylized campus island map">
+    <div class="marker" data-id="temple" data-name="Vishwanath Temple" data-events="false" style="left:56%;top:25%"><b>01</b><span>Vishwanath Temple</span></div>
+    <div class="marker" data-id="satish" data-name="Satish Dhawan Hostel" data-events="false" style="left:47%;top:30%"><b>02</b><span>Satish Dhawan Hostel</span></div>
+    <div class="marker" data-id="arya" data-name="Aryabhatta Hostel" data-events="false" style="left:39%;top:43%"><b>03</b><span>Aryabhatta Hostel</span></div>
+    <div class="marker" data-id="sac" data-name="Student Activity Center (SAC)" data-events="true" style="left:52%;top:59%"><b>04</b><span>SAC</span></div>
+    <div class="marker" data-id="raj" data-name="Rajputana Ground" data-events="true" style="left:54.5%;top:67%"><b>05</b><span>Rajputana Ground</span></div>
+    <div class="marker" data-id="ee" data-name="Electrical Engineering" data-events="true" style="left:76%;top:70%"><b>06</b><span>Electrical Engineering</span></div>
+    <div class="marker" data-id="cse" data-name="CSE Department" data-events="true" style="left:81%;top:63%"><b>07</b><span>CSE Department</span></div>
+    <div class="marker" data-id="lt3" data-name="LT-3" data-events="true" style="left:77%;top:88%"><b>08</b><span>LT-3</span></div>
+    <div class="marker" data-id="lt2" data-name="LT-2" data-events="true" style="left:82%;top:69%"><b>09</b><span>LT-2</span></div>
+    <div class="marker" data-id="lt1" data-name="LT-1" data-events="true" style="left:70%;top:84%"><b>10</b><span>LT-1</span></div>
+    <div class="marker" data-id="limbdi" data-name="Limbdi Corner" data-events="false" style="left:49%;top:73%"><b>11</b><span>Limbdi Corner</span></div>
+    <div class="marker" data-id="caf" data-name="IIT(BHU) Cafeteria" data-events="false" style="left:66%;top:76%"><b>12</b><span>Cafeteria</span></div>
+    <div class="marker" data-id="sb" data-name="Swatantrata Bhavan" data-events="true" style="left:88%;top:64%"><b>13</b><span>Swatantrata Bhavan</span></div>
+    <div class="marker" data-id="gym" data-name="Gymkhana Ground" data-events="true" style="left:60.3%;top:84%"><b>14</b><span>Gymkhana Ground</span></div>
+    <div class="marker" data-id="adv" data-name="ADV Ground" data-events="true" style="left:66%;top:94%"><b>15</b><span>ADV Ground</span></div>
+    <div class="marker" data-id="gate" data-name="Hyderabad Gate" data-events="false" style="left:28%;top:57.5%"><b>16</b><span>Hyderabad Gate</span></div>
+
+    <div class="you-are-here" id="youAreHere"><span></span> ENTRY</div>
+  </div>
+
+  <div class="map-ui">
+    <div class="compass">N<em>↑</em></div>
+  </div>
+
+  <div class="bottom-bar">
+    <span>IIT (BHU) · VARANASI</span>
+    <span class="bar-line"></span>
+    <span>FOLLOW THE ROADS · FIND THE FESTIVAL</span>
+  </div>
+</main>
+
+<aside class="menu" id="menu">
+  <div class="menu-head"><span>THE CAMPUS</span><button id="closeMenu">×</button></div>
+  <h2>Find your<br><em>way.</em></h2>
+  <button data-open="events">EVENTS <small>Explore seven days of the festival</small><b>→</b></button>
+  <button data-open="guide">HOW IT WORKS <small>Use the map as your guide</small><b>→</b></button>
+  <div class="menu-foot">IIT (BHU) · FESTIVAL MAP<br>VARANASI</div>
+</aside>
+
+<section class="guide" id="guide">
+  <button class="close-overlay">×</button>
+  <div class="overlay-kicker">NAVIGATION</div>
+  <h2>See the island.<br><em>Follow the road.</em></h2>
+  <div class="steps">
+    <div><strong>01</strong><span>Choose a marked location on the campus.</span></div>
+    <div><strong>02</strong><span>The map guides you along the campus roads.</span></div>
+    <div><strong>03</strong><span>Click the destination to see its festival schedule.</span></div>
+  </div>
+</section>
+
+<section class="place-panel" id="placePanel">
+  <div class="panel-map"></div>
+  <div class="panel-content">
+    <button class="back" id="back">← RETURN TO MAP</button>
+    <div class="panel-kicker" id="panelKicker">FESTIVAL LOCATION</div>
+    <h1 id="panelTitle">Gymkhana Ground</h1>
+    <p class="panel-sub" id="panelSub">Follow the road. Your destination is highlighted.</p>
+
+    <div class="route-info">
+      <div><small>LOCATION</small><b><span id="routeTo">GYMKHANA</span></b></div>
+      <div><small>MAP TYPE</small><b id="routeDistance">FESTIVAL VENUE</b></div>
+    </div>
+
+    <div class="event-switch" id="eventSwitch">
+      <button class="day active" data-day="1">01</button>
+      <button class="day" data-day="2">02</button>
+      <button class="day" data-day="3">03</button>
+      <button class="day" data-day="4">04</button>
+      <button class="day" data-day="5">05</button>
+      <button class="day" data-day="6">06</button>
+      <button class="day" data-day="7">07</button>
+    </div>
+
+    <div class="event-detail" id="eventDetail">
+      <div class="event-number" id="eventDay">DAY 01</div>
+      <div><h2 id="eventTitle">Opening Parade</h2><p id="eventText">The festival officially spills into the open air.</p></div>
+      <time id="eventTime">05:00 PM — 07:00 PM</time>
+    </div>
+
+    <div class="no-event" id="noEvent">
+      <small>LANDMARK</small>
+      <h2>No events here.</h2>
+      <p>Kept on the map to help you navigate the campus.</p>
+    </div>
+  </div>
+</section>
+
+<div class="splash" id="splash"></div>
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
